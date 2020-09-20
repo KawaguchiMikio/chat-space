@@ -69,26 +69,36 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    &__message {
-      border: none;
-      float: left;
-      height: 50px;
-      width: calc(100% - 150px);
-    }
+
     &__mask {
-      background-color: $white;
       float: left;
       height: 50px;
-      padding-right: 10px;
+      width: 100%;
+      display: flex;
+
+      &__input {
+        width: 100%;
+        height: 100%;
+      }
+      
       &__image {
         font-size: 20px;
         line-height: 50px;
+        position: relative;
       }
+
+      .Form__icon {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+      }
+
       .hidden {
         display: none;
       }
     }
-    &__submit {
+
+    .submit {
       background-color: $light_blue;
       border: none;
       color: $white;
